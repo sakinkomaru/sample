@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>開発って何してるの？ー特設HP使用技術編ー</title>
+  
+  <style>
+    #control-panel {
+      background: #f0f0f0;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #ccc;
+    }
+    button {
+      margin-right: 10px;
+      cursor: pointer;
+      padding: 5px 10px;
+    }
+  </style>
+
+  <link id="main-css" rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="control-panel">
+    <button onclick="changeState('html')">1. HTMLのみ</button>
+    <button onclick="changeState('css')">2. HTML + CSS</button>
+    <button onclick="changeState('js')">3. HTML + CSS + JS</button>
+    <span id="current-state-label">現在の状態: HTML + CSS + JS</span>
+  </div>
+
+  <header>
+    <h1>開発って何してるの？</h1>
+    <h3>このサイトは、html, css, javascriptを使用して作られています。画面上部のボタンを押して、それぞれどんな働きをしているか見てみよう！</h3>
+  </header>
+
+  <main>
+    <section>
+      <h2>開発タスクのお仕事</h2>
+
+      <div class="task-group">
+        <h3>特設サイト制作</h3>
+        
+        <div class="card-container">
+          <div class="card">
+            <h4>研修</h4>
+            <p>
+              ５月〜６月<br>
+              今年度はつい先日研修が終わりました！<br>
+              HTML/CSS/js(vue.js)
+            </p>
+          </div>
+
+          <div class="card">
+            <h4>デザイン</h4>
+            <p>デザインコンペでコンセプトを決定した後、順次制作。</p>
+          </div>
+
+          <div class="card">
+            <h4>サイトの見た目を作る</h4>
+            <p>
+              デザインが出来次第制作開始。<br>
+              HTML/CSS
+            </p>
+          </div>
+
+          <div class="card">
+            <h4>サイトの動きを作る</h4>
+            <p>
+              js<br>
+              これらのコードはGitHubというツールに逐一提出・管理します<br>
+              最終的にこれらのコードをXserverにアップロード、公開します。
+            </p>
+          </div>
+
+          <div class="card">
+            <h4>情報収集</h4>
+            <p>
+              出店、ステージ、企画、協賛企業etc…<br>
+              サイトに掲載する情報を各班から収集。DBにぶち込んでサイトに引っ張ってくる形で実装します。<br>
+              今年度はIMPACTにお世話になるので少し楽になりそう！
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="task-group">
+        <h3>常設サイト更新</h3>
+        <div class="card-container single-column">
+          <div class="card">
+            <p>
+              常設サイトに出店団体の募集、ステージ出演団体の募集、個人協賛のお願いなど、祭の最新情報を掲載しています。<br>
+              使っているツールはWordPressです。<br>
+              一部プレビューが使えない箇所があるので、統括チェック提出用の資料を作るのかちょっと面倒だったりします…
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="interactive-section">
+      <h2>インタラクティブ機能 (JSテスト用)</h2>
+      <p>下のボタンは「JS有効時」のみ数字がカウントアップされます。</p>
+      <button id="counter-btn">いいね！: <span id="count-display">0</span></button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
